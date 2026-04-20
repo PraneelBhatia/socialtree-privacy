@@ -48,7 +48,7 @@ Google's privacy policy governs Google's handling of that data: <https://policie
 While SocialTree is in TestFlight beta, **every** AI request — the full note text or audio, plus Gemini's full response — is logged to Firebase Studio at 100% sampling, so the developer (Praneel Bhatia) can inspect prompts and responses to diagnose extraction quality issues. This logging:
 
 - Only applies when AI is enabled. With AI off in **Settings → AI Usage**, nothing is transmitted and nothing is logged.
-- Is stored in Google Cloud's logging system, governed by Firebase's retention policy.
+- Is stored in Google Cloud's logging system, retained for approximately 30 days (Google Cloud Logging default retention for Firebase AI Logic prompts and responses).
 - Is scoped to the TestFlight period. Before SocialTree ships to the public App Store, trace sampling will be reduced to ≤5% or disabled entirely. When that change happens, this policy section will be updated and the "Last updated" date at the top will change.
 - Is distinct from Google's own processing. Google receives the content either way to run the extraction; the "trace logging" disclosed here is an additional retention by the developer for debugging.
 
