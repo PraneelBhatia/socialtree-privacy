@@ -81,7 +81,7 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or a
 - **Objection and restriction** — request that processing be stopped or restricted. Disable AI in **Settings → AI Usage** to stop all third-party processing immediately.
 - **Lodge a complaint** — contact your local data-protection authority if you believe SocialTree has not handled your request appropriately.
 
-For any of these rights you cannot self-serve, email **praneel.bhatia@outlook.com** and the developer will respond within 30 days.
+For any of these rights you cannot self-serve, email **praneel.business@gmail.com** and the developer will respond within 30 days.
 
 ## iOS permissions SocialTree requests
 
@@ -104,4 +104,4 @@ If the policy changes materially, the "Last updated" date above will change and 
 
 Questions about this policy:
 
-**praneel.bhatia@outlook.com**
+**praneel.business@gmail.com**
