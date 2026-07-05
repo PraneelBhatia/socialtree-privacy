@@ -5,7 +5,7 @@ description: How SocialTree handles your data — on-device storage, opt-in AI, 
 
 # SocialTree Privacy Policy
 
-_Last updated: 2026-04-20_
+_Last updated: 2026-07-05_
 
 SocialTree is a personal social memory assistant for iOS, operated as a personal project by **Praneel Bhatia**. This policy explains what data the app handles, when (and why) any of it leaves your device, and the controls available to you.
 
@@ -41,18 +41,18 @@ Google's privacy policy governs Google's handling of that data: <https://policie
 
 **Training policy**: SocialTree is configured on Firebase's paid tier, which — per Google's current terms for the Gemini Developer API — means prompts and responses are not used to train Google's general-purpose models. This is a standing Google commitment for paid-tier usage, not a SocialTree-specific contract. If Google's terms change, this policy will be updated in sync.
 
-**Subprocessors**: The two Google services involved — Firebase AI Logic and Gemini — are both operated by Google LLC and are the only external subprocessors SocialTree uses. No other third parties (no analytics vendors, crash reporters, or ad networks) receive user content.
+**Subprocessors**: The two Google services involved — Firebase AI Logic and Gemini — are both operated by Google LLC and are the only external subprocessors that receive **user content**. SocialTree also sends **anonymous usage analytics** to TelemetryDeck GmbH (a privacy-focused analytics service based in Germany): event names such as "capture completed" or "paywall shown", plus a random install identifier. These signals never include names, note text, transcripts, or any other user content, are not linked to your identity, and can be disabled at any time in **Settings** ("Share Anonymous Usage Analytics"). No crash reporters or ad networks are used.
 
-## Beta testing transparency (TestFlight period)
+## Early-access transparency (AI request logging)
 
-While SocialTree is in TestFlight beta, **every** AI request — the full note text or audio, plus Gemini's full response — is logged to Firebase Studio at 100% sampling, so the developer (Praneel Bhatia) can inspect prompts and responses to diagnose extraction quality issues. This logging:
+While SocialTree is in its early-access period (roughly its first hundred users, spanning the TestFlight beta and the initial App Store release), **every** AI request — the full note text or audio, plus Gemini's full response — is logged to Firebase Studio at 100% sampling, so the developer (Praneel Bhatia) can inspect prompts and responses to diagnose extraction quality issues. This logging:
 
 - Only applies when AI is enabled. With AI off in **Settings → AI Usage**, nothing is transmitted and nothing is logged.
 - Is stored in Google Cloud's logging system, retained for approximately 30 days (Google Cloud Logging default retention for Firebase AI Logic prompts and responses).
-- Is scoped to the TestFlight period. Before SocialTree ships to the public App Store, trace sampling will be reduced to ≤5% or disabled entirely. When that change happens, this policy section will be updated and the "Last updated" date at the top will change.
+- Is scoped to the early-access period. Full logging is kept while the user base is small because it is the developer's only way to find and fix cases where the AI extraction gets real-world notes wrong. As the app matures (on the order of one hundred active users), trace sampling will be reduced to ≤5% or disabled entirely. When that change happens, this policy section will be updated and the "Last updated" date at the top will change.
 - Is distinct from Google's own processing. Google receives the content either way to run the extraction; the "trace logging" disclosed here is an additional retention by the developer for debugging.
 
-If you are not comfortable with the developer being able to see your captured notes during the beta, the options are: (a) disable AI in **Settings → AI Usage** (your captures stay local only), or (b) uninstall the TestFlight build and wait for the App Store release, which will have significantly reduced or disabled trace logging.
+If you are not comfortable with the developer being able to see your captured notes during the early-access period, you can disable AI in **Settings → AI Usage** (your captures stay local only), or wait for a later release, after this logging has been significantly reduced or disabled.
 
 ## What SocialTree does NOT do
 
@@ -76,7 +76,7 @@ If you are located in the European Economic Area (EEA), the United Kingdom, or a
 
 - **Access** — request a copy of the personal data SocialTree holds about you. Because everything is on-device, you can self-serve via **Settings → Export Data (JSON)**.
 - **Rectification** — correct inaccurate personal data. You can edit any person, encounter, or note directly in the app.
-- **Erasure** — request deletion of your personal data. You can self-serve via **Settings → Clear All Data**, which wipes local storage. For any data that may have been retained in Firebase trace logs during the beta period, email the contact address below and the developer will delete it within 30 days.
+- **Erasure** — request deletion of your personal data. You can self-serve via **Settings → Clear All Data**, which wipes local storage. For any data that may have been retained in Firebase trace logs during the early-access period, email the contact address below and the developer will delete it within 30 days.
 - **Data portability** — receive your data in a structured, machine-readable format. Use **Settings → Export Data (JSON)**.
 - **Objection and restriction** — request that processing be stopped or restricted. Disable AI in **Settings → AI Usage** to stop all third-party processing immediately.
 - **Lodge a complaint** — contact your local data-protection authority if you believe SocialTree has not handled your request appropriately.
