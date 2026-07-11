@@ -5,7 +5,7 @@ description: How SocialTree handles your data — on-device storage, opt-in AI, 
 
 # SocialTree Privacy Policy
 
-_Last updated: 2026-07-05_
+_Last updated: 2026-07-11_
 
 SocialTree is a personal social memory assistant for iOS, operated as a personal project by **Praneel Bhatia**. This policy explains what data the app handles, when (and why) any of it leaves your device, and the controls available to you.
 
@@ -41,7 +41,7 @@ Google's privacy policy governs Google's handling of that data: <https://policie
 
 **Training policy**: SocialTree is configured on Firebase's paid tier, which — per Google's current terms for the Gemini Developer API — means prompts and responses are not used to train Google's general-purpose models. This is a standing Google commitment for paid-tier usage, not a SocialTree-specific contract. If Google's terms change, this policy will be updated in sync.
 
-**Subprocessors**: The two Google services involved — Firebase AI Logic and Gemini — are both operated by Google LLC and are the only external subprocessors that receive **user content**. SocialTree also sends **anonymous usage analytics** to TelemetryDeck GmbH (a privacy-focused analytics service based in Germany): event names such as "capture completed" or "paywall shown", plus a random install identifier. These signals never include names, note text, transcripts, or any other user content, are not linked to your identity, and can be disabled at any time in **Settings** ("Share Anonymous Usage Analytics"). No crash reporters or ad networks are used.
+**Subprocessors**: The two Google services involved — Firebase AI Logic and Gemini — are both operated by Google LLC and are the only external subprocessors that receive **user content**. SocialTree also sends **anonymous usage analytics** to TelemetryDeck GmbH (a privacy-focused analytics service based in Germany, EU-hosted) via its official SDK: event names such as "capture completed" or "paywall shown", small non-identifying event details (counts, categories, coarse duration buckets), and general device statistics (app version, iOS version, device model, language). These signals never include names, note text, transcripts, or any other user content; the only identifier is a random per-install ID (never IDFA/IDFV or any hardware identifier), which TelemetryDeck additionally anonymizes by hashing. Analytics is not linked to your identity and can be disabled at any time in **Settings** ("Share Anonymous Usage Analytics"). TelemetryDeck's privacy policy: <https://telemetrydeck.com/privacy/>. No crash reporters or ad networks are used.
 
 ## Early-access transparency (AI request logging)
 
@@ -56,15 +56,15 @@ If you are not comfortable with the developer being able to see your captured no
 
 ## What SocialTree does NOT do
 
-- No analytics SDKs, crash reporters, or telemetry
-- No advertising networks or tracking identifiers (no IDFA, no device IDs sent anywhere)
+- No crash reporters, advertising networks, or tracking identifiers (no IDFA, no fingerprinting, no hardware IDs sent anywhere). The only telemetry is the anonymous, opt-out TelemetryDeck usage analytics described above.
 - No data brokers
-- No sharing with third parties other than Google (Firebase AI Logic and Gemini), and only when you opt in
+- No sharing with third parties other than Google (Firebase AI Logic and Gemini — user content, opt-in) and TelemetryDeck (anonymous usage statistics, opt-out)
 - No account, login, or sign-up — SocialTree does not know who you are
 
 ## Your controls
 
 - **Turn AI off:** Settings → AI Usage (disables all AI processing)
+- **Turn analytics off:** Settings → "Share Anonymous Usage Analytics" (stops all TelemetryDeck signals immediately)
 - **Delete everything:** Settings → Clear All Data
 - **Export your data:** Settings → Export Data (JSON)
 - **Start fresh:** Settings → Reset & Start Onboarding
