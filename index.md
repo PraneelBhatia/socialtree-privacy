@@ -5,7 +5,7 @@ description: How SocialTree handles your data — on-device storage, opt-in AI, 
 
 # SocialTree Privacy Policy
 
-_Last updated: 2026-07-11_
+_Last updated: 2026-07-16_
 
 SocialTree is a personal social memory assistant for iOS, operated as a personal project by **Praneel Bhatia**. This policy explains what data the app handles, when (and why) any of it leaves your device, and the controls available to you.
 
@@ -20,7 +20,18 @@ The following categories of personal data may be held on-device:
 - Free-form notes you write
 - Audio recordings from voice captures
 - Photos you attach as avatars
+- Contact details (phone, email, birthday, photo) that you explicitly link or import from Apple Contacts for a specific person
 - Precise location attached to an encounter, when you grant permission and the app is in the foreground
+
+## Calendar access (optional)
+
+If you turn on **"Upcoming from your calendar"** (in Settings → Notifications & Calendar, or from the card in Catch Up), SocialTree reads upcoming events from your device calendar — the next 7 days of event titles, times, and attendee names and emails — to show meetings with people you already track, prepare briefings, and schedule local reminders around those meetings.
+
+- All matching between calendar events and your people happens **entirely on your device**. Calendar data is never sent to any server, including Google.
+- Calendar access is used **read-only**: SocialTree never adds, changes, or deletes calendar events. (iOS grants calendar reading only through its "full access" permission — Apple offers no read-only tier — but the app contains no code path that writes to your calendar.)
+- If you capture a note about a meeting, only the note you write or dictate is processed as described in the AI section below, the same as any other capture.
+- Reminders about meetings and people are delivered as **local notifications**, scheduled on your device. By default their text is name-free on the lock screen; showing names is a separate opt-in in Settings.
+- You can turn the feature off anytime in **Settings → Notifications & Calendar**, and revoke calendar access in iOS Settings → SocialTree.
 
 ## When data is sent to Google (Firebase AI Logic → Gemini)
 
@@ -89,6 +100,10 @@ For any of these rights you cannot self-serve, email **praneel.business@gmail.co
 - **Speech Recognition** — to transcribe voice captures (transcription runs on-device via Apple's speech framework)
 - **Location (While Using the App)** — to attach a place to captures when you enable it
 - **Photos** — to pick an avatar image for a person
+- **Camera** — to take a profile photo or an encounter photo
+- **Contacts** — only when you choose to link a person to, or save a person into, Apple Contacts; the app never scans your address book
+- **Calendars (full access)** — only if you enable "Upcoming from your calendar"; used read-only as described in the Calendar section above
+- **Notifications** — to deliver the optional local reminders described above; name-free on the lock screen unless you opt in
 
 Each permission is optional; the app functions without any of them, with reduced capture options.
 
