@@ -11,7 +11,7 @@ SocialTree is a personal social memory assistant for iOS, operated as a personal
 
 ## Where your data lives
 
-Everything you capture in SocialTree — the people you add, notes, voice memos, photos, circles — is stored **locally on your iPhone** using Apple SwiftData. SocialTree does not operate its own server and never receives or stores your data.
+Your full SocialTree graph — the people you add, notes, voice memos, photos, and circles — is stored **locally on your iPhone** using Apple SwiftData. SocialTree does not operate an account or graph-storage server of its own. When you enable optional AI, shared-link lookup, or analytics features, the limited data described below is sent to the named service providers.
 
 The following categories of personal data may be held on-device:
 
@@ -44,7 +44,7 @@ If you turn on **"Upcoming from your calendar"** (in Settings → Notifications 
 
 SocialTree uses **Google's Firebase AI Logic** service to process capture content into structured information. Firebase AI Logic is a managed Google Cloud service that relays each request to **Google's Gemini** large-language model and returns the structured response. From your perspective, you are interacting with one service (Google); from an engineering perspective, two related Google services are involved, both operated by Google LLC.
 
-AI processing is **strictly opt-in**. During onboarding and anytime in **Settings → AI Usage**, you choose whether to enable AI. With AI off, no capture content is sent to Google.
+AI processing is **strictly opt-in**. During onboarding and anytime in **Settings → AI Usage**, you choose whether to enable AI. With AI off, no capture or saved-graph content is sent to Google for AI processing.
 
 When AI is enabled, the following may be sent to Google (Firebase AI Logic → Gemini):
 
@@ -64,9 +64,9 @@ Google's privacy policy governs Google's handling of that data: <https://policie
 
 ## Early-access transparency (AI request logging)
 
-While SocialTree is in its early-access period (roughly its first hundred users, spanning the TestFlight beta and the initial App Store release), **every** AI request — the full capture text or audio, any attached profile text, plus Gemini's full response — is logged to Firebase Studio at 100% sampling, so the developer (Praneel Bhatia) can inspect prompts and responses to diagnose extraction quality issues. This logging:
+While SocialTree is in its early-access period (roughly its first hundred users, spanning the TestFlight beta and the initial App Store release), **every** AI request — the full capture text or audio, any attached profile text, any relevant saved person/encounter excerpts included for that AI feature, plus Gemini's full response — is logged to Firebase Studio at 100% sampling, so the developer (Praneel Bhatia) can inspect prompts and responses to diagnose extraction quality issues. This logging:
 
-- Only applies when AI is enabled. With AI off in **Settings → AI Usage**, no capture content is sent to Google or logged there.
+- Only applies when AI is enabled. With AI off in **Settings → AI Usage**, no capture or saved-graph content is sent to Google for AI processing or logged there.
 - Is stored in Google Cloud's logging system, retained for approximately 30 days (Google Cloud Logging default retention for Firebase AI Logic prompts and responses).
 - Is scoped to the early-access period. Full logging is kept while the user base is small because it is the developer's only way to find and fix cases where the AI extraction gets real-world notes wrong. As the app matures (on the order of one hundred active users), trace sampling will be reduced to ≤5% or disabled entirely. When that change happens, this policy section will be updated and the "Last updated" date at the top will change.
 - Is distinct from Google's own processing. Google receives the content either way to run the extraction; the "trace logging" disclosed here is an additional retention by the developer for debugging.
@@ -94,7 +94,7 @@ If you are not comfortable with the developer being able to see your AI capture 
 
 If you are located in the European Economic Area (EEA), the United Kingdom, or another jurisdiction with comparable data-protection rights, you have the following rights regarding personal data processed by SocialTree:
 
-- **Access** — request a copy of the personal data SocialTree holds about you. Because everything is on-device, you can self-serve via **Settings → Export Data (JSON)**.
+- **Access** — request a copy of the full graph SocialTree stores on your device via **Settings → Export Data (JSON)**. For any AI request content retained temporarily in Firebase logs, use the contact address below.
 - **Rectification** — correct inaccurate personal data. You can edit any person, encounter, or note directly in the app.
 - **Erasure** — request deletion of your personal data. You can self-serve via **Settings → Clear All Data**, which wipes local storage. For any data that may have been retained in Firebase trace logs during the early-access period, email the contact address below and the developer will delete it within 30 days.
 - **Data portability** — receive your data in a structured, machine-readable format. Use **Settings → Export Data (JSON)**.
