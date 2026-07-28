@@ -58,7 +58,7 @@ Every request is cryptographically attested by **Firebase App Check** (using App
 
 Google's privacy policy governs Google's handling of that data: <https://policies.google.com/privacy>. Firebase-specific terms: <https://firebase.google.com/support/privacy>.
 
-**Training policy**: SocialTree is configured on Firebase's paid tier, which — per Google's current terms for the Gemini Developer API — means prompts and responses are not used to train Google's general-purpose models. This is a standing Google commitment for paid-tier usage, not a SocialTree-specific contract. If Google's terms change, this policy will be updated in sync.
+**Google's data-use terms**: Google handles prompts and responses under the privacy and service terms applicable to the Firebase/Gemini service tier configured for SocialTree. SocialTree does not make a separate or unconditional promise about Google's use of submitted content for model training. Review Google's current terms using the links above.
 
 **Subprocessors**: The two Google services involved — Firebase AI Logic and Gemini — are both operated by Google LLC and are the only external subprocessors that receive **user content**. SocialTree also sends **anonymous usage analytics** to TelemetryDeck GmbH (a privacy-focused analytics service based in Germany, EU-hosted) via its official SDK: event names such as "capture completed" or "paywall shown", small non-identifying event details (counts, categories, coarse duration buckets), and general device statistics (app version, iOS version, device model, language). These signals never include names, note text, transcripts, or any other user content; the only identifier is a random per-install ID (never IDFA/IDFV or any hardware identifier), which TelemetryDeck additionally anonymizes by hashing. Analytics is not linked to your identity and can be disabled at any time in **Settings** ("Share Anonymous Usage Analytics"). TelemetryDeck's privacy policy: <https://telemetrydeck.com/privacy/>. No crash reporters or ad networks are used.
 
@@ -75,7 +75,7 @@ If you are not comfortable with the developer being able to see your AI capture 
 
 ## What SocialTree does NOT do
 
-- No crash reporters, advertising networks, or tracking identifiers (no IDFA, no fingerprinting, no hardware IDs sent anywhere). The only telemetry is the anonymous, opt-out TelemetryDeck usage analytics described above.
+- No crash reporters, advertising networks, IDFA, fingerprinting, or hardware identifiers. TelemetryDeck receives only the anonymous, opt-out usage analytics and random per-install identifier described above; it is not used for advertising tracking.
 - No data brokers
 - No sale or sharing of personal data for advertising. Capture content is sent only to Google under your AI choice. Optional shared-link lookup contacts the profile site itself, and TelemetryDeck receives only the anonymous usage statistics described above.
 - No account, login, or sign-up — SocialTree does not know who you are
